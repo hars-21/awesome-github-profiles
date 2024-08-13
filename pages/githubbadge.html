@@ -284,14 +284,15 @@
 
 <body>
     <nav class="navbar">
-        <a  class="navbar-left" href="../index.html" style="text-decoration: none; color: #333;">
+        <a class="navbar-left" href="../index.html" style="text-decoration: none; color: #333;">
             <img src="../assets/recode-hive.png" alt="Recode Hive Icon" class="navbar-icon">
-          <span class="navbar-text">Recode Hive</span>
+            <span class="navbar-text">Recode Hive</span>
         </a>
         <div class="navbar-right">
             <a href="githubbadge.html" class="navbar-link">Github-Badge</a>
             <a href="https://github.com/recodehive/awesome-github-profiles/issues/new?assignees=&labels=%E2%9E%95+profile&projects=&template=add_profile.md&title=Add+Profile%3A+"
                 class="navbar-link">Add Profile</a>
+            <a href="./buildprofile.html" class="navbar-link">Build Profile</a>
             <a href="#" class="navbar-link">Tools</a>
             <a href="events.html" class="navbar-link">Events</a>
             <a href="blog.html" class="navbar-link">Learn</a>
@@ -842,7 +843,9 @@
                 worldwide.</p>
         </div>
         <div class="hoverImageWrapper">
-            <img class="hoverImage" src="https://images.ctfassets.net/wfutmusr1t3h/6eWM76bx8skN2B4Jpvkcil/3ccdafea4229f02802abbd9fc6634a3b/Certifiedtocat_full__2_.svg?w=1280&q=75" alt="Tilt Effect Image">
+            <img class="hoverImage"
+                src="https://images.ctfassets.net/wfutmusr1t3h/6eWM76bx8skN2B4Jpvkcil/3ccdafea4229f02802abbd9fc6634a3b/Certifiedtocat_full__2_.svg?w=1280&q=75"
+                alt="Tilt Effect Image">
         </div>
 
     </div>
@@ -1025,32 +1028,32 @@
 
 
     </script>
-     <script>
-        
+    <script>
+
         // Initialize Tilt.js
- window.document.addEventListener("DOMContentLoaded",function () {
-      const imageElement = document.querySelector('.hoverImage');
-      if (imageElement) {
-        const handleMouseMove = (e) => {
-          let rect = imageElement.getBoundingClientRect();
-          let x = e.clientX - rect.left;
-          let y = e.clientY - rect.top;
-  
-          let dx = (x - rect.width / 2) / (rect.width / 2);
-          let dy = (y - rect.height / 2) / (rect.height / 2);
-  
-          imageElement.style.transform = `perspective(500px) rotateY(${dx * 5}deg) rotateX(${-dy * 5}deg)`;
-        };
+        window.document.addEventListener("DOMContentLoaded", function () {
+            const imageElement = document.querySelector('.hoverImage');
+            if (imageElement) {
+                const handleMouseMove = (e) => {
+                    let rect = imageElement.getBoundingClientRect();
+                    let x = e.clientX - rect.left;
+                    let y = e.clientY - rect.top;
 
-        const handleMouseLeave = () => {
-          imageElement.style.transform = "";
-        };
+                    let dx = (x - rect.width / 2) / (rect.width / 2);
+                    let dy = (y - rect.height / 2) / (rect.height / 2);
 
-        imageElement.addEventListener('mousemove', handleMouseMove);
-        imageElement.addEventListener('mouseleave', handleMouseLeave);
-      }
-    })
-      </script>
+                    imageElement.style.transform = `perspective(500px) rotateY(${dx * 5}deg) rotateX(${-dy * 5}deg)`;
+                };
+
+                const handleMouseLeave = () => {
+                    imageElement.style.transform = "";
+                };
+
+                imageElement.addEventListener('mousemove', handleMouseMove);
+                imageElement.addEventListener('mouseleave', handleMouseLeave);
+            }
+        })
+    </script>
 </body>
 
 </html>
